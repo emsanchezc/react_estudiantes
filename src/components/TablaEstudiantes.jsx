@@ -1,11 +1,13 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useContext} from "react";
+import AuthContext from "./AuthContext";
 
 function TablaEstudiantes() {
 
+    const {token} = useContext(AuthContext);
     const [estudiantes, setEstudiantes] = useState([]); //Listado de estudiantes
 
     let myHeaders = new Headers();
-    myHeaders.append("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZGVudGlmaWNhY2lvbiI6MTAyMjM0ODc3NCwiY29ycmVvIjoiZXNhbmNoZXoxOTg4QGdtYWlsLmNvbSIsImlhdCI6MTY4MTYwODM4MCwiZXhwIjoxNjgyMjEzMTgwfQ.q5KH3EX0r_x9nBfPw_Sdlo5Qve9SKNqBq52XFxxsXnQ");
+    myHeaders.append("Authorization", `Bearer ${token}`);
 
     let requestOptions = {
         method: 'GET',

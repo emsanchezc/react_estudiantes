@@ -25,3 +25,35 @@ tr:nth-child(even) td{
 tr:hover td{
     background-color: #e2e2e2;
 }
+
+
+nav {
+    background-color: #d97d06;
+    color: #fff;
+    padding: 0.5rem;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    justify-content: space-between;
+  }
+  
+  nav li {
+    margin-right: 1rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem;
+    display: block;
+    transition: background-color 0.2s;
+  }
+  
+  nav a:hover {
+    background-color: #555;
+  }
